@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive FAQ Accordion | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="accordion">
+    <div class="image-box">
+      <img src="images/faq image.png" alt="">
+    </div>
+    <div class="accordion-text">
+      <div class="title">FAQ</div>
+    <ul class="faq-text">
+      <li>
+        <div class="question-arrow">
+          <span class="question">What is Blogster?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Blogster is a platform that allows users to write and publish their own blogs on a variety of topics.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">How do I create an account on Blogster?
+          </span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>To create an account on Blogster, simply click on the "Sign Up" button on the homepage and follow the prompts to provide your information.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">Is it free to use Blogster?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Yes, Blogster offers a free basic plan that allows users to create and publish their blogs. </p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">How do I write and publish a blog?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>After logging in, click on the "Write a Blog" button. Use the editor to compose your blog post, add images, and format your content. Once you're satisfied, click "Publish."</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">Is there a word limit for blog posts?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>While there is no strict word limit, it's recommended to keep your blog posts concise and engaging. Aim for around 500 to 1500 words for optimal reader engagement.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">What topics can I write about on Blogster?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>You're free to write about a wide range of topics on Blogster, including lifestyle, technology, travel, food, health, and more.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">How can I gain more visibility for my blogs?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Sharing your blogs on social media, engaging with readers through comments, and using relevant keywords can help increase the visibility of your blogs.</p>
+        <span class="line"></span>
+      </li>
+
+    </ul>
+    </div>
+  </div>
+
+
+  <script>
+    let li = document.querySelectorAll(".faq-text li");
+    for (var i = 0; i < li.length; i++) {
+      li[i].addEventListener("click", (e)=>{
+        let clickedLi;
+        if(e.target.classList.contains("question-arrow")){
+          clickedLi = e.target.parentElement;
+        }else{
+          clickedLi = e.target.parentElement.parentElement;
+        }
+       clickedLi.classList.toggle("showAnswer");
+      });
+    }
+  </script>
+
+</body>
+</html>
