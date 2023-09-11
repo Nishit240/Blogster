@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container{
+
+    display: flex;
+    margin-top: 90px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+.card{
+    width: 700px;
+    height: 655px;
+    margin: 100px auto 0;
+    perspective: 1000px;
+}
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front , .back{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front{
+    background: url('img/about_us0.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+} 
+.front h2{
+    font-weight: 500;
+    color:black;
+    font-size: 35px;
+}
+.front p{
+    color: #ccc;
+    font-size: 20px;
+    color: black;
+}
+.back{
+    background: #e3f4f4;
+    color: #333;
+    padding: 20px, 40px;
+    transform: rotateY(180deg);
+}
+.back h1{
+    font-size: 50px;
+    line-height: 55px;
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+.back h1 span{
+    font-weight: 400;
+}
+.back p{
+    padding: 20px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.back p span{
+    font-weight: 600;
+
+}
+.back .image{
+    padding-left: 20px;
+    width: 120px;
+}
+.row{
+    display: flex;
+    padding: 20px;
+
+}
+.col h2{
+    font-size: 20px;
+}
+.col::after{
+    content: '';
+    width: 1.5px;
+    height: 20px;
+    background: #7800ad;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.col p{
+    margin-top: 5px;
+}
+.back button{
+    background: #7800ad;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-right: 20px;
+    box-shadow: 0 8px 10px rgba(120, 0, 173, 0.3);
+    position: relative;
+}
+
+.back button:hover{
+    background-color: #4dbbc7;
+    color: black;
+    transition: 0.2s;
+}
+.back a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    position: relative;
+}
+.back a img{
+    width: 50%;
+    position: relative;
+}
+.back a:hover{
+    background-color: #4dbbc7;
+    transition: 0.2s;
+}
+
+.card:hover .card-inner{
+    transform: rotateY(180deg);
+}
